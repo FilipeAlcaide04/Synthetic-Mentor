@@ -2,14 +2,43 @@
   "manifest_version": 3,
   "name": "Synthetic-Mentor",
   "version": "1.0",
-  "description": "Your AI-powered web Mentor",
-  "permissions": ["activeTab", "scripting"],
+  "description": "Your AI-powered web Mentor for summarizing and interacting with web content",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
   "action": {
     "default_popup": "view/popup.html",
     "default_icon": {
-      "16": "assets/icon16.png",
-      "48": "assets/icon48.png",
-      "128": "assets/icon128.png"
+      "16": "assets/icon_16.png",
+      "48": "assets/icon_48.png",
+      "128": "assets/icon_128.png"
     }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["view/chat/chat.css"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "view/chat/chat.html",
+      "view/chat/chat.css",
+      "view/chat/chat.js",
+      "assets/*"
+    ],
+    "matches": ["<all_urls>"]
+  }],
+  "icons": {
+    "16": "assets/icon_16.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
   }
 }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthetic-Mentor</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="logo-text">
+            <h1>Synthetic-Mentor</h1>
+            <p class="subtitle">Your AI-powered web assistant</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="main-actions">
+        <button id="summarizeBtn" class="action-btn primary">
+          <div class="btn-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <div class="btn-content">
+            <span class="btn-title">Resumir Site</span>
+            <span class="btn-description">Obtenha um resumo do conteúdo</span>
+          </div>
+          <i class="fas fa-chevron-right btn-arrow"></i>
+        </button>
+        
+        <button id="chatBtn" class="action-btn secondary">
+          <div class="btn-icon">
+            <i class="fas fa-comment-dots"></i>
+          </div>
+          <div class="btn-content">
+            <span class="btn-title">Chat com Contexto</span>
+            <span class="btn-description">Converse sobre o site</span>
+          </div>
+          <i class="fas fa-chevron-right btn-arrow"></i>
+        </button>
+      </div>
+
+      <div id="loading" class="loading-container hidden">
+        <div class="loading-content">
+          <div class="spinner"></div>
+          <h3>Processando...</h3>
+          <p>Analisando o conteúdo da página</p>
+        </div>
+      </div>
+
+      <div id="summaryContainer" class="content-section hidden">
+        <div class="section-header">
+          <h2><i class="fas fa-file-text"></i> Resumo do Site</h2>
+        </div>
+        <div id="summaryContent" class="content-box"></div>
+        <div class="section-actions">
+          <button id="copySummary" class="secondary-btn">
+            <i class="fas fa-copy"></i>
+            Copiar Resumo
+          </button>
+        </div>
+      </div>
+
+      <div id="chatContainer" class="content-section hidden">
+        <div class="section-header">
+          <h2><i class="fas fa-comments"></i> Chat</h2>
+        </div>
+        <div id="chatMessages" class="chat-box"></div>
+        <div class="chat-input">
+          <div class="input-group">
+            <input type="text" id="userMessage" placeholder="Pergunte sobre o site...">
+            <button id="sendMessage" class="send-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="settings">
+          <span style="color: var(--text-muted);">https://github.com/FilipeAlcaide04</span>          
+        </div>
+        <div class="version">
+          <span>v1.0</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
