@@ -20,25 +20,21 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
+  "web_accessible_resources": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["view/chat/chat.css"]
+      "resources": [
+        "assets/*",
+        "libs/marked.esm.js"
+      ],
+      "matches": ["<all_urls>"]
     }
   ],
-  "web_accessible_resources": [{
-    "resources": [
-      "view/chat/chat.html",
-      "view/chat/chat.css",
-      "view/chat/chat.js",
-      "assets/*"
-    ],
-    "matches": ["<all_urls>"]
-  }],
   "icons": {
     "16": "assets/icon_16.png",
     "48": "assets/icon_48.png",
     "128": "assets/icon_128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
   }
 }

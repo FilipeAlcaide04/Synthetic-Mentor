@@ -15,9 +15,7 @@
     <header class="main-header">
       <div class="header-content">
         <div class="logo">
-          <div class="logo-icon">
-            <i class="fas fa-robot"></i>
-          </div>
+          <div class="logo-icon"><i class="fas fa-robot"></i></div>
           <div class="logo-text">
             <h1>Synthetic-Mentor</h1>
             <p class="subtitle">Your AI-powered web assistant</p>
@@ -29,23 +27,10 @@
     <div class="main-content">
       <div class="main-actions">
         <button id="summarizeBtn" class="action-btn primary">
-          <div class="btn-icon">
-            <i class="fas fa-file-contract"></i>
-          </div>
+          <div class="btn-icon"><i class="fas fa-file-contract"></i></div>
           <div class="btn-content">
             <span class="btn-title">Summarise Website</span>
-            <span class="btn-description">Get a summary of the content</span>
-          </div>
-          <i class="fas fa-chevron-right btn-arrow"></i>
-        </button>
-        
-        <button id="chatBtn" class="action-btn secondary">
-          <div class="btn-icon">
-            <i class="fas fa-comment-dots"></i>
-          </div>
-          <div class="btn-content">
-            <span class="btn-title">Chat with Context</span>
-            <span class="btn-description">Discuss the website</span>
+            <span class="btn-description">Get a summary and chat</span>
           </div>
           <i class="fas fa-chevron-right btn-arrow"></i>
         </button>
@@ -59,24 +44,15 @@
         </div>
       </div>
 
-      <div id="summaryContainer" class="content-section hidden">
+      <!-- Combined summary + chat box -->
+      <div id="summaryChatContainer" class="content-section hidden">
         <div class="section-header">
-          <h2><i class="fas fa-file-text"></i> Website Summary</h2>
+          <h2><i class="fas fa-file-text"></i> Summary & Chat</h2>
         </div>
-        <div id="summaryContent" class="content-box"></div>
-        <div class="section-actions">
-          <button id="copySummary" class="secondary-btn">
-            <i class="fas fa-copy"></i>
-            Copy Summary
-          </button>
+        <div id="summaryChatBox" class="content-box chat-box">
+          <div id="summaryContent"></div>
+          <div id="chatMessages"></div>
         </div>
-      </div>
-
-      <div id="chatContainer" class="content-section hidden">
-        <div class="section-header">
-          <h2><i class="fas fa-comments"></i> Chat</h2>
-        </div>
-        <div id="chatMessages" class="chat-box"></div>
         <div class="chat-input">
           <div class="input-group">
             <input type="text" id="userMessage" placeholder="Ask about the site...">
@@ -85,10 +61,15 @@
             </button>
           </div>
         </div>
+        <div class="section-actions">
+          <button id="copySummary" class="secondary-btn">
+            <i class="fas fa-copy"></i> Copy Summary
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="popup.js"></script>
+  <script type="module" src="popup.js"></script>
 </body>
 </html>
