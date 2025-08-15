@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,8 +33,8 @@
             <i class="fas fa-file-contract"></i>
           </div>
           <div class="btn-content">
-            <span class="btn-title">Resumir Site</span>
-            <span class="btn-description">Obtenha um resumo do conteúdo</span>
+            <span class="btn-title">Summarise Website</span>
+            <span class="btn-description">Get a summary of the content</span>
           </div>
           <i class="fas fa-chevron-right btn-arrow"></i>
         </button>
@@ -44,8 +44,8 @@
             <i class="fas fa-comment-dots"></i>
           </div>
           <div class="btn-content">
-            <span class="btn-title">Chat com Contexto</span>
-            <span class="btn-description">Converse sobre o site</span>
+            <span class="btn-title">Chat with Context</span>
+            <span class="btn-description">Discuss the website</span>
           </div>
           <i class="fas fa-chevron-right btn-arrow"></i>
         </button>
@@ -54,20 +54,20 @@
       <div id="loading" class="loading-container hidden">
         <div class="loading-content">
           <div class="spinner"></div>
-          <h3>Processando...</h3>
-          <p>Analisando o conteúdo da página</p>
+          <h3>Processing...</h3>
+          <p>Analysing the page content</p>
         </div>
       </div>
 
       <div id="summaryContainer" class="content-section hidden">
         <div class="section-header">
-          <h2><i class="fas fa-file-text"></i> Resumo do Site</h2>
+          <h2><i class="fas fa-file-text"></i> Website Summary</h2>
         </div>
         <div id="summaryContent" class="content-box"></div>
         <div class="section-actions">
           <button id="copySummary" class="secondary-btn">
             <i class="fas fa-copy"></i>
-            Copiar Resumo
+            Copy Summary
           </button>
         </div>
       </div>
@@ -79,7 +79,7 @@
         <div id="chatMessages" class="chat-box"></div>
         <div class="chat-input">
           <div class="input-group">
-            <input type="text" id="userMessage" placeholder="Pergunte sobre o site...">
+            <input type="text" id="userMessage" placeholder="Ask about the site...">
             <button id="sendMessage" class="send-btn">
               <i class="fas fa-paper-plane"></i>
             </button>
@@ -87,17 +87,6 @@
         </div>
       </div>
     </div>
-
-    <footer class="main-footer">
-      <div class="footer-content">
-        <div class="settings">
-          <span style="color: var(--text-muted);">https://github.com/FilipeAlcaide04</span>          
-        </div>
-        <div class="version">
-          <span>v1.0</span>
-        </div>
-      </div>
-    </footer>
   </div>
 
   <script src="popup.js"></script>
